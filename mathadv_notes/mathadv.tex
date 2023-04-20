@@ -1,0 +1,104 @@
+\documentclass[12pt]{book}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={170mm,257mm},
+left=20mm,
+top=20mm,
+}
+\usepackage[upint, noamssymbols, varg]{newpxmath}
+\usepackage{newpxtext}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{mdframed}
+\newenvironment{xbox}
+  {\vspace{1em}\begin{changemargin}{2cm}{2cm}\begin{mdframed}[linewidth=0.75pt]}
+  {\end{mdframed}\end{changemargin}}
+\newtheorem{theo}{Theorem}[section]
+\newtheorem{prop}[theo]{Proposition}
+\newtheorem{corl}[theo]{Corollary}
+\newtheorem{lema}[theo]{Lemma}
+\theoremstyle{definition}
+\newtheorem{defi}[theo]{Definition}
+
+\title{Notes for the Australian Mathematics Advanced Stage 6 Course}
+\date{}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+\part{Year 11}
+\chapter{Functions}
+\section{Functions and Relations}
+  A function takes in input and returns exactly one output, whereas a relation can return more than one. A function is a
+  mapping between two sets.
+\subsection{Definition of a function}
+  Functions can be thought of as a set of ordered pairs $(x,y)$.
+\subsection{Domain, range, independent and dependent variables}
+  \begin{defi}[Domain and range]
+  	The domain of a function is the set of all possible inputs values a function can have. The range of a function is 
+  	the set of all possible outputs a function can have.
+  \end{defi}
+  \begin{defi}[Independent and dependent variables]
+  	A function $f(x)$ has $x$ as the independent variable. The output (or $f(x)$ itself) is the dependent variable, as it
+  	is dependent on $x$.
+  \end{defi}
+  \noindent Interval notation is used to describe unbroken portions of the real line.
+  \begin{defi}[Interval notation]
+  	The \textit{open} interval $(a,b)$ represents the set of all real numbers between $a$ and $b$ but not including $a$ or $b$.
+  	The \textit{closed} interval $[a,b]$ contains all real numbers between $a$ and $b$ and includes the endpoints $a$ and $b$. 
+  	The \textit{half-open} interval $[a,b)$ is the set of all real numbers between $a$ and $b$ but only includes the endpoint $a$.
+  	Similarly, the half-open interval $(a,b]$ only contains the endpoint $b$.
+  \end{defi}
+\subsection{Graphs of functions}
+\subsection{Types of functions and relations}
+  \begin{defi}[One-to-one]
+    A \textit{one-to-one} function takes in one input and returns exactly one output. It passes both
+    horizontal and vertical line tests. For example, \[f(x)=x\] is a one-to-one function.
+  \end{defi}
+  \begin{defi}[Many-to-one]
+    A \textit{One-to-many} function has more than one input that produce the same output. It fails
+    the horizontal line test but passes ther vertical. An example is \[f(x)=x^2\] where both $x=-1$ and $x=1$ give the
+    output $1$.
+  \end{defi}
+  \begin{defi}[One-to-many]
+    A \textit{one-to-many} relation has an input that outputs more than one number. It passes the horizontal line test but
+    fails the vertical. An example relation is \[y^2=x\] where $x=1$ has the outputs $-1$ and $+1$. 
+  \end{defi}
+  \begin{defi}[Many-to-many]
+    A \textit{many-to-many} relation has multiple input which output multiple of the same outputs. It fails both horizontal 
+    and vertical line tests. An example is the circle \[x^2+y^2=1\] where $x=1$ or $x=-1$ both produce outputs $1$ and $-1$.
+  \end{defi}
+\subsection{Properties of functions}
+  \begin{defi}[Even function]
+    A function $f$ is even if it satisfies, \[f(-x)=f(x).\] The graph of $f$ is symmetric about
+    the $y$-axis.
+  \end{defi}
+  \begin{defi}[Odd function]
+    A function $f$ is odd if it satisfies, \[f(-x)=-f(x).\] The graph of $f$ has point symmetry about the origin (if you
+    spin the graph $180^\circ$ about the origin, its the same graph).
+  \end{defi}
+  \begin{defi}[Algebra of functions]
+    Two functions $f$ and $g$ can be added ($f(x)+g(x)$), subtracted ($f(x)-g(x)$), multiplied ($f(x)g(x))$ together or 
+    divided ($f(x)/g(x)$ provided $g(x)$ is never $0$), forming a new function. The domain of the new function is the intersection of the domain of $f$
+    and the domain of $g$. The range is more difficult to find.
+  \end{defi}
+  \begin{defi}[Function composition]
+    Function composition is another way to combine functions to form new functions. The composition of functions $f$ and $g$
+    is denoted as \[f\circ g(x)=f(g(x)).\] The domain of $f\circ g$ is the domain of $g$, whose outputs must also lie in the
+    domain of $f$. The range of $f\circ g$ is all the outputs that from the range of $g$ as input.
+  \end{defi}
+\subsection{Solutions to functions}
+  When we solve the equation \[f(x)=0,\] we are solving for the $x$ values that are sent to $0$ by the function. Graphically,
+  they are the $x$-intercepts. This is because we are finding all ordered pairs whose $y$ (output) value is $0$, corresponding
+  to the $x$-intercepts.
+\section{Linear, quadratic and cubic functions}
+\part{Year 12}
+\end{document}
