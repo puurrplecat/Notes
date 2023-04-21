@@ -24,6 +24,9 @@ top=20mm,
 \newtheorem{lema}[theo]{Lemma}
 \theoremstyle{definition}
 \newtheorem{defi}[theo]{Definition}
+\newtheorem{eggs}[theo]{Example}
+
+\newcommand{\bb}[1]{\mathbb{#1}}
 
 \title{Notes for the Australian Mathematics Advanced Stage 6 Course}
 \date{}
@@ -57,6 +60,8 @@ top=20mm,
   	The \textit{half-open} interval $[a,b)$ is the set of all real numbers between $a$ and $b$ but only includes the endpoint $a$.
   	Similarly, the half-open interval $(a,b]$ only contains the endpoint $b$.
   \end{defi}
+  Interval notation is used with the $\in$ symbol (read as ``in'') You may use the notation $x\in\bb{R}$ to denote $x$ being any 
+  real number. Intervals are combined with the union (meaning ``or'') symbol, such as in \[x\in(-\infty,0)\cup(0,\infty)\]
 \subsection{Graphs of functions}
 \subsection{Types of functions and relations}
   \begin{defi}[One-to-one]
@@ -100,5 +105,65 @@ top=20mm,
   they are the $x$-intercepts. This is because we are finding all ordered pairs whose $y$ (output) value is $0$, corresponding
   to the $x$-intercepts.
 \section{Linear, quadratic and cubic functions}
+\subsection{Linear functions}
+  A linear function is of the form \[f(x)=mx+c\] where $m$ and $c$ are any real numbers. $m$ represents the gradient and
+  $c$ is the $y$-intercept. This produces a straight line graph.
+  \begin{defi}[Point-gradient form]
+    The unique line that passes through the point $(x_1,y_1)$ and has a gradient of $m$ has the equation
+    \[y-y_1=m(x-x_1)\] 
+  \end{defi}
+  If you had only two points and no gradient, first calculate the gradient from the two points, and use the above equation.
+  The equation for gradient between two points $(x_1,y_1)$ and $(x_2,y_2)$ is \[m=\frac{y_2-y_1}{x_2-x_1}.\]
+  \begin{defi}[Parallel and perpendicular lines]
+    Two lines a parallel if and only if their gradients are equal. If their $y$-intercepts are also equal then they are they
+    exact same line. Two lines are perpendicular if and only if their gradients are negative recipricols of each other. That
+    is, if two gradients are $m_1$ and $m_2$, then \[m_1m_2=-1.\]
+  \end{defi}
+\subsection{Quadratic functions}
+  A quadratic function is of the form \[f(x)=ax^2+bx+c\] for some real numbers $a$, $b$ and $c$.
+  \begin{defi}[Vertex]
+  The \textit{vertex} (or \textit{turning point}) of a parabola is where the curve of the parabola changes direction. The $x$-value
+  of the vertex is \[x=\frac{-b}{2a}.\] The parabola is symmetric across the line containing the vertex.
+  \end{defi}
+  Parabolas may have zero, one or two vertices, which also means the equation $f(x)=0$ has zero, one or two solutions.
+  \begin{defi}[Completing the square]
+    Given a parabola of the form \[f(x)=ax^2+bx+c,\] completing the square allows us to form a square term plus a constant.
+  \end{defi}
+  Steps to completing the square:
+  \begin{enumerate}[label=\roman*)]
+    \item Factor out the coefficient of $x^2$. \[f(x)=a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)\]
+    \item Add and subtract the square of the half of the coefficient of $x$ in the bracket. 
+      \[f(x)=a\left(x^2+\frac{b}{a}x+\frac{b^2}{4a^2}+\frac{c}{a}-\frac{b^2}{4a^2}\right)\]
+    \item The first three terms above form a perfect square \[f(x)=a\left(\left(x-\frac{b}{2a}\right)^2+\frac{c}{a}-\frac{b^2}{4a^2}\right)\]
+    \item Expand the brackets.
+      \[f(x)=a\left(x-\frac{b}{2a}\right)^2+c-\frac{b^2}{4a}\]
+  \end{enumerate}
+  We also call this form \textit{vertex form}. If \[f(x)=a(x-h)^2+k\] then the vertex is at $(h,k)$
+  \bigskip\\ Factorising quadratics may be done in many ways. I propose only one.
+  \begin{eggs}[Factorising quadratics]
+    Suppose we have to factorise \[f(x)=6x^2-17x+12.\] We need to find two numbers $a$ and $b$ that 
+    \begin{itemize}
+      \item MULTIPLY to $72$,
+      \item SUM to $-17$.
+    \end{itemize}
+    You start listing pairs of positive numbers that multiple to $72$ in your head (or on paper). Whilst you scan for pairs, think about
+    which pair could possibly combined (with addition and subtraction) to make $-17$. That pair is $-9$ and $-8$. Check that
+    the sign of the product is positive. Split the middle term into $-9x$ and $-8x$ to get
+    \[f(x)=(6x^2-9x)+(-8x+12),\]
+    group the terms as such and factorise.
+  \end{eggs}
+  \begin{defi}[The quadratic formula]
+    Given a quadratic \[f(x)=ax^2+bx+c,\] the solutions to $f(x)=0$ are
+    \[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\] We call $b^2-4ac$ the \textit{discriminant} of the parabola.
+  \end{defi}
+  \begin{defi}[Discriminant]
+    The discriminant of a quadratic function $f(x)=ax^2+bx+c$ is \[\Delta=b^2-4ac.\]
+    \begin{enumerate}
+      \item If $\Delta>0$, there are two solutions. The graph does not touch the $x$-axis.
+      \item If $\Delta=0$, there is one solution. The vertex is the only point that touches the $x$-axis.
+      \item If $\Delta<0$, there is no solutions. The graph passes through the $x$-axis at different points.
+    \end{enumerate}
+  \end{defi}
+\subsection{Simultaneous equations}
 \part{Year 12}
 \end{document}
