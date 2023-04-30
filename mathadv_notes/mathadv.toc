@@ -11,4 +11,18 @@
 \contentsline {subsection}{\numberline {1.2.1}Linear functions}{9}{}%
 \contentsline {subsection}{\numberline {1.2.2}Quadratic functions}{9}{}%
 \contentsline {subsection}{\numberline {1.2.3}Simultaneous equations}{11}{}%
-\contentsline {part}{II\hspace {1em}Year 12}{13}{}%
+\contentsline {subsection}{\numberline {1.2.4}The equation $f(x)=k$}{11}{}%
+\contentsline {subsection}{\numberline {1.2.5}Application: break-even point}{11}{}%
+\contentsline {subsection}{\numberline {1.2.6}Cubic functions}{11}{}%
+\contentsline {section}{\numberline {1.3}Further functions and relations}{11}{}%
+\contentsline {subsection}{\numberline {1.3.1}Polynomials and the polynomial functions}{11}{}%
+\contentsline {subsection}{\numberline {1.3.2}The hyperbolic function}{12}{}%
+\contentsline {subsection}{\numberline {1.3.3}The absolute value function}{12}{}%
+\contentsline {subsection}{\numberline {1.3.4}Function transormations}{13}{}%
+\contentsline {subsection}{\numberline {1.3.5}Circles}{13}{}%
+\contentsline {subsection}{\numberline {1.3.6}Semicircles}{13}{}%
+\contentsline {chapter}{\numberline {2}Trigonometric Functions}{15}{}%
+\contentsline {section}{\numberline {2.1}Trigonometry and measure of angles}{15}{}%
+\contentsline {subsection}{\numberline {2.1.1}Introduction to trigonometry}{15}{}%
+\contentsline {subsection}{\numberline {2.1.2}Special formulae}{15}{}%
+\contentsline {part}{II\hspace {1em}Year 12}{17}{}%

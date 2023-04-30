@@ -165,5 +165,123 @@ top=20mm,
     \end{enumerate}
   \end{defi}
 \subsection{Simultaneous equations}
+\subsection{The equation $f(x)=k$}
+  When we algebraically solve the equation $f(x)=k$, graphically, we are finding the point of intersection of the graph
+  of $f$ with the horizontal line $y=k$.
+\subsection{Application: break-even point}
+\subsection{Cubic functions}
+  The cubic functions we will study here are of the form
+  \begin{align}
+  f(x) &=kx^3\\
+    \text{or}\ f(x) &=k(x-b)^3+c\\
+    \text{or}\ f(x) &=k(x-a)(x-b)(x-c)
+  \end{align}
+  where $a,b,c,k$ are real numbers.
+  \begin{itemize}
+    \item For Function 1.1, its only turning point is at $(0,0)$ and increasing $|k|$ makes it more narrow. The sign of $k$
+    determines the sign of the function as $x\to\pm\infty$.
+    \item For Function 1.2, its only turning point is at $(b,c)$, and is only a shifted Function 1.1.
+    \item For Function 1.3, it has three $x$-intercepts at $a$, $b$ and $c$. The sign of $k$ determines where the function
+    starts and ends.
+  \end{itemize}
+\section{Further functions and relations}
+\subsection{Polynomials and the polynomial functions}
+  \begin{defi}[Polynomials and polynomial function]
+    A polynomial is an expression of the form \[a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0\]
+    where $n$ is a nonnegative ($\geq 0$) integer, $a_1,\ldots,a_n$ are real numbers with $a_n\neq 0$. A polynomial
+    function is a function built from the polynomial expression, that is
+    \[p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0\]
+  \end{defi}
+  \begin{defi}[Polynomial terms]
+     Let $p$ be a polynomial function, that is
+    \[p(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0.\]
+    We call $n$ the \textit{degree} of the polynomial. The coefficient $a_n$ is called the \textit{leading coefficient}.
+  \end{defi}
+  You will often come across polynomials in their factored form, and asked to sketch. That is, to sketch something of the form
+  \[p(x)=k(x-\alpha_1)(x-\alpha_2)\cdots(x-\alpha_n).\]
+  First, all the roots are also the $x$-intercepts. Then find the sign of the leading coefficient (sign of $k$ above) as that tells
+  you where the function starts and ends.
+\subsection{The hyperbolic function}
+  The hyperbolic function is important to study because they represent quantities that decrease rapidly as its dependent variable
+  increases.
+  \begin{defi}[The hyperbolic function]
+    The hyperbolic function we will study here is of the form \[f(x)=\frac{k}{x}.\] It has asymptotes $x=0$ and $y=0$.
+  \end{defi}
+\subsection{The absolute value function}
+  The use of the absolute value function is to find the ``size'' of real numbers. That is the size of $-2$ is $2$ because it
+  is a distance of $2$ away from $0$ on the numberline.
+  \begin{defi}[The absolute value function]
+    The basic absolute value function is \[f(x)=|x|\] and is defined by the piecewise function
+    \[f(x)=\begin{cases}x &\text{if}\ x\geq 0\\-x &\text{if}\ x<0\end{cases}.\]
+    We can generalise the above function further to absolute functions of the form
+    \[f(x)=|ax+b|\]
+    where $a$ and $b$ are real numbers. The piecewise function that defines these are
+    \[f(x)=\begin{cases}ax+b &\text{if}\ x\geq \frac{-b}{a}\\ \\ -ax-b &\text{if}\ x<\frac{-b}{a}\end{cases}.\]
+  \end{defi}
+  \noindent How to sketch $f(x)=|ax+b|$.
+  \begin{enumerate}
+    \item Find the $x$ intercept by solving $ax+b=0$. Then sketch each seperate line according to the cases above.
+  \end{enumerate}
+  How to solve absolute value equations. Let us try to solve $|ax+b|=k$.
+  \begin{enumerate}
+    \item Split the equation into two equations. That is
+      \[\begin{cases}ax+b=k &\text{if}\ x\geq \frac{-b}{a}\\ \\ -ax-b=k &\text{if}\ x<\frac{-b}{a}\end{cases}.\]
+    \item Solve each case seperately. Check that your solution for $x$ lies in the corresponding restriction $x$.
+  \end{enumerate}
+  Graphically, we are finding the point of intersection between $|ax+b|$ and $y=k$.
+\subsection{Function transormations}
+  \begin{theo}
+    Given a function $f(x)$, the function $-f(x)$ is the function $f$ reflected across the $x$-axis.
+  \end{theo}
+  \begin{theo}
+    Given a function $f(x)$, the function $f(-x)$ is the function $f$ reflected across the $y$-axis.
+  \end{theo}
+  \begin{theo}
+    Given a function $f(x)$, the function $-f(-x)$ is the function $f$ reflected across the $x$-axis, then reflected
+    across the $y$ axis.
+  \end{theo}
+\subsection{Circles}
+  A circle with radius $r$ and centre at the origin has the equation \[x^2+y^2=r^2.\] Note this is not a function.
+  A general circle with radius $r$ and centre at $(a,b)$ has the equation \[(x-a)^2+(y-b)^2=r^2.\]
+  The equation is derived with the Pythagoras' theorem. If the question gave $x^2+y^2+ax+by+c=0$, complete the square
+  to get the equation into the form $(x-a)^2+(y-b)^2=r^2$.
+\subsection{Semicircles}
+  A positive semicircle with radius $r$ and centre at the origin has the equation \[y=\sqrt{r^2-x^2}.\] A negative semicircle
+  has the equation \[y=-\sqrt{r^2-x^2}.\] Both of these semicircles are functions.
+
+
+\chapter{Trigonometric Functions}
+\section{Trigonometry and measure of angles}
+\subsection{Introduction to trigonometry}
+  \begin{align*}
+    \sin\theta &=\frac{\text{opposite}}{\text{hypotenuse}}\\
+    \cos\theta &= \frac{\text{adjacent}}{\text{hypotenuse}}\\
+    \tan\theta &= \frac{\text{opposite}}{\text{adjacent}}
+  \end{align*}
+  This can be remembered with the handy mnemonic SOH CAH TOA. Pronounced (SO-KAH-TOWA).
+\subsection{Special formulae}
+  \begin{theo}[Sine rule]
+    Let a triangle have angles $A$, $B$, $C$, and side lengths $a$, $b$, $c$ opposite their respective angles. The sine rule
+    states that
+    \[\frac{\sin A}{a}=\frac{\sin B}{b} = \frac{\sin C}{c}.\]
+    Consequently, we have that \[\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\]
+  \end{theo}
+  \begin{theo}[Cosine rule]
+    Let a triangle have angles $A$, $B$, $C$, and side lengths $a$, $b$, $c$ opposite their respective angles. The cosine rule
+    states that
+    \[c^2=a^2+b^2-2ab\cos C\]
+    Similarly, $a^2 = b^2+c^2-2bc\cos A$ and $b^2=a^2+c^2-2ac\cos B$. There are also the formulas for the angle at a vertex
+    \[C=\cos^{-1}\left(\frac{a^2+b^2-c^2}{2ab}\right).\] The angle formulas are similar for the other angles $B$ and $A$.
+  \end{theo}
+  \begin{theo}[Area of a triangle]
+    Let a triangle have two sides $a$ and $b$, and an included angle (angle between the sides) $C$. Then the area of the triangle
+    is given by \[A=\frac{1}{2}ab\sin C.\]
+  \end{theo}
+  DON'T FORGET THE AMBIGUOUS CASE.
+  \begin{defi}[Angle of elevation and depression]
+    The angle of elevation an object makes with an observer, is the angle the object makes with the horizontal. The observer
+    has to ``look'' up for it to be called an angle of elevation. Similarly, the angle of elevation is the angle the object makes
+    with the horizontal, but the observer has to ``look'' down.
+  \end{defi}
 \part{Year 12}
 \end{document}
