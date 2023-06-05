@@ -8,16 +8,20 @@ total={170mm,257mm},
 left=20mm,
 top=20mm,
 }
-\usepackage[upint, noamssymbols, varg]{newpxmath}
+\usepackage[upint, noamssymbols]{newtxmath}
 \usepackage{newpxtext}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage{mdframed}
+\usepackage{tabularx}
 \newenvironment{xbox}
   {\vspace{1em}\begin{changemargin}{2cm}{2cm}\begin{mdframed}[linewidth=0.75pt]}
   {\end{mdframed}\end{changemargin}}
+
+\DeclareMathOperator{\var}{Var}
+  
 \newtheorem{theo}{Theorem}[section]
 \newtheorem{prop}[theo]{Proposition}
 \newtheorem{corl}[theo]{Corollary}
@@ -283,5 +287,120 @@ top=20mm,
     has to ``look'' up for it to be called an angle of elevation. Similarly, the angle of elevation is the angle the object makes
     with the horizontal, but the observer has to ``look'' down.
   \end{defi}
+\chapter{Calculus}
+\chapter{Exponential and logarithmic functions}
+\chapter{Statistical analysis}
+\section{Probability}
+  Experimental probability is measuring probability from an actual experiment conducted in reality, whereas theoretical probability
+  is a mathematically calculated expectation of outcomes. The probability calculated from experiments is called \textit{relative
+  frequency} and is calculated with the formula
+  \[\frac{\text{favourable outcomes}}{\text{total outcomes}},\] where the number of outcomes occured in some scenario. Probabilities
+  can be visualised on a \textit{probability scale}, which is a line from 0 to 1.
+\subsubsection*{Strategies}
+  \begin{tabularx}{\linewidth}{l X}
+  Exhaustive listing: & You list every possible outcome, and count all the favourable outcomes. \\ \\
+  Arrays (two stages): & You draw a table. The top row and left column represent the outcomes of two events. The other boxes
+    represent the all the combinations of the two events. Count the favourable outcomes. \\ \\ 
+  Tree (multi-stage): & Each event has certain outcomes, which form branches of a tree. A full branch represents a final outcome.  
+  \end{tabularx}
+\subsection{Set notation}
+  We can describe events by encapsulating them in sets. Sets are denoted with capital letters such as $A$ and this will represent
+  an event like shoe sizes.
+  \begin{defi}[Complement]
+    The complement of a set $A$ is denoted with $\overline{A}$ (or $A'$ or $A^c$) and represents all outcomes that aren't in $A$.
+    For example, if $A$ represented even numbers, then $\overline{A}$ would be the odd numbers.
+  \end{defi}
+  \begin{defi}[Union]
+    The \textit{union} of two sets $A$ and $B$ is denoted $A\cup B$ and is the collection of all events in $A$ or in $B$.
+  \end{defi}
+  \begin{defi}[Intersection]
+    The \textit{intersection} of two sets $A$ and $B$ is denoted $A\cap B$ and is the collection of all events that occur
+    in both $A$ and $B$.
+  \end{defi}
+  Drawing and shading Venn diagrams are very helpful.
+  \begin{prop}[Some rules]
+    \ \begin{enumerate}
+      \item $P(\overline{A})=1-P(A)$
+      \item $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+    \end{enumerate}
+  \end{prop}
+\subsection{Independence and mutually exclusive}
+  Events are mutually exclusive if they cannot happen at the same time. For example, walking forwards and backwards are mutually
+  exclusive events. Independent events are events whose outcomes do not affect each other.
+  \vspace{1em} \\
+  If two events $A$ and $B$ are indepenent, then $P(A\cap B)=P(A)\times P(B)$. (This is also known as the multiplication law.)
+\subsection{Conditional probability}
+  For dependent events, certain outcomes can change the probabilites of another event's outcomes, but their probability can still
+  be calculated. Let's say $A$ depends on $B$, and that $B$ occurs first. We can calculate the probability of $A$ occuring \textit{given}
+  that $B$ has occured. We use the formula
+  \[P(A\mid B)=\frac{P(A\cap B)}{P(B)}.\]
+  (Note that $P(B)\neq 0$.) If $A$ and $B$ were instead independent, then $P(A\mid B)=P(A)$.
+\section{Discrete probability distributions}
+  \begin{defi}[Random variable]
+    A \textit{random variable} (denoted with a capital letter) represents the outcomes of a random event (Truthfully incorrect). For example, if an event rolling a dice, then the random
+    variable would represent the outcomes 1, 2, 3, 4, 5 and 6. The previous example is also an example of a \textit{discrete} random
+    variable. A continuous one could be human height. 
+  \end{defi}
+  In this course, random variables will always be numbers. There are also probabilities associated with random variables. Let's say
+  our event is one dice rolled, and so our random variable $X$ will be the numbers 1 to 6. We construct a 
+  discrete probability distribution table.
+  \begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+  \hline &&&&&&\\[-0.6em]
+  X & 1 & 2 & 3 & 4 & 5 & 6 \\[-0.6em] &&&&&& \\
+  \hline
+  &&&&&&\\[-0.6em]
+  P(X=x) & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\[-0.6em] &&&&&& \\
+  \hline
+  \end{tabular}\end{center}
+  When the probabilites are all equal (like in the above example), we call the distribution \textit{uniform}.
+\subsubsection*{Conditions for probability distributions}
+  \begin{enumerate}
+    \item The sum of all probabilities is 1.
+    \item There are no negative probabilities.
+  \end{enumerate}
+\subsection{Expected value}
+  The expected value of a random variable $E(X)$ represents the mean outcome of an event. For example, a game requires you to roll prime on
+  a ten-sided die to win \$5 otherwise it is a loss of \$3. What can you \textit{expect} to win from this game? The first step
+  is to construct a probability distribution table. (What is the random variable?)
+  \begin{center}\begin{tabular}{|c|c|c|}
+  \hline &&\\[-0.6em]
+  $X$ & $-3$ & $5$ \\[-0.6em] && \\
+  \hline
+  &&\\[-0.6em]
+  $P(X=x)$ & $3/5$ & $2/5$ \\[-0.6em] && \\
+  \hline
+  \end{tabular}\end{center}
+  The expected value is calculated by multiplying each of the random variable outcomes by their corresponding probability, and
+  summing it all up. For this example, the working out will be
+  \[-3\times\frac{3}{5}+5\times\frac{2}{5}=0.2,\] so we can conclude that we can expect to win $\$0.20$.
+  \vspace{1em}\\
+  Since expected value is the mean, it is sometimes written as $\mu$.
+\subsection{Variance}
+  Variance (denoted $\var(X)$) is a measures how spread out outcomes are (the larger the variance, the more spread out the outcomes are). It calculated 
+  from the formula \[E(X^2)-\left(E(X)\right)^2\]. The value $E(X^2)$ is calculated similarly to mean, except the square of the random
+  variable is multiplied to the probability before it is summed. It is useful to write a third row in the table for $X^2$.
+  \begin{center}\begin{tabular}{|c|c|c|}
+  \hline &&\\[-0.6em]
+  $X$ & $-3$ & $5$ \\[-0.6em] && \\
+  \hline
+  &&\\[-0.6em]
+  $X^2$ & $9$ & $25$ \\[-0.6em] && \\
+  \hline && \\[-0.6em]
+  $P(X=x)$ & $3/5$ & $2/5$ \\[-0.6em] && \\
+  \hline
+  \end{tabular}\end{center}
+  Then \[\begin{aligned}E(X^2) &=9\times\frac{3}{5}+25\times\frac{2}{5}\\ &= 15.4\end{aligned}\] and since we already know
+  that $E(X)=0.2$, then 
+  \[\var(X)=15.4-0.2^2=15.36.\]
+\subsection{Standard deviation}
+  Standard deviation (denoted $\sigma$) is another measure of spread and is the square root of variance.
+  \[\sigma=\sqrt{\var(X)}.\]
+  It exists because it is a more useful descriptor of spread (as you will see applications of in Year 12).
+\subsubsection*{Note on sample vs population}
+  A \textit{population} is the complete total something, like all people or every brand. However it is unrealistic to survey or observe so many
+  things. So a sample is taken where only a portion of the population is examined. This means that all statistical measurements like
+  mean or variance of the sample slightly differ from the measurements of the population. (On a calculator you will use the population
+  mean and variance even if your data is sampled, otherwise the calculator will use a different formula.) Obviously, as our sample
+  grows larger, our measurements get closer to measurements from population.
 \part{Year 12}
 \end{document}

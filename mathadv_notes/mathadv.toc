@@ -25,4 +25,15 @@
 \contentsline {section}{\numberline {2.1}Trigonometry and measure of angles}{15}{}%
 \contentsline {subsection}{\numberline {2.1.1}Introduction to trigonometry}{15}{}%
 \contentsline {subsection}{\numberline {2.1.2}Special formulae}{15}{}%
-\contentsline {part}{II\hspace {1em}Year 12}{17}{}%
+\contentsline {chapter}{\numberline {3}Calculus}{17}{}%
+\contentsline {chapter}{\numberline {4}Exponential and logarithmic functions}{19}{}%
+\contentsline {chapter}{\numberline {5}Statistical analysis}{21}{}%
+\contentsline {section}{\numberline {5.1}Probability}{21}{}%
+\contentsline {subsection}{\numberline {5.1.1}Set notation}{21}{}%
+\contentsline {subsection}{\numberline {5.1.2}Independence and mutually exclusive}{22}{}%
+\contentsline {subsection}{\numberline {5.1.3}Conditional probability}{22}{}%
+\contentsline {section}{\numberline {5.2}Discrete probability distributions}{22}{}%
+\contentsline {subsection}{\numberline {5.2.1}Expected value}{23}{}%
+\contentsline {subsection}{\numberline {5.2.2}Variance}{23}{}%
+\contentsline {subsection}{\numberline {5.2.3}Standard deviation}{23}{}%
+\contentsline {part}{II\hspace {1em}Year 12}{25}{}%
